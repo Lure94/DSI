@@ -1,21 +1,26 @@
 'use strict';
 
 /**
- * Ruta temporal de salud para la estructura inicial.
- * Laureano reemplazará este archivo al integrar el catálogo de películas.
+ * RUTAS MVC: películas.
+ * Las rutas no consultan TMDB directamente; delegan esa responsabilidad al controlador/servicio.
  */
+const movieController = require('../controllers/movieController');
+
 async function movieRoutes(ctx) {
-  if (ctx.url.pathname === '/api/health' && ctx.req.method === 'GET') {
-    ctx.send(200, {
-      status: 'ok',
-      database: 'sqlite',
-      catalog: 'pendiente',
-      backend: 'estructura MVC inicial',
-    });
-    return true;
+  const path = ctx.url.pathname;
+  const method = ctx.req.method;
+
+  if (path === '/api/health' && method === 'GET') {
+    await movieController.health(ctx);
+  } else if (path === '/api/movies' && method === 'GET') {
+    await movieController.list(ctx);
+  } else {
+    const match = /^\/api\/movies\/((?:apple|tmdb)-\d+)$/.exec(path);
+    if (!match || method !== 'GET') return false;
+    await movieController.detail(ctx, match[1]);
   }
 
-  return false;
+  return true;
 }
 
 module.exports = movieRoutes;
