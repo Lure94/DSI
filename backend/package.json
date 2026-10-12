@@ -1,0 +1,15 @@
+{
+  "name": "cinereview-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "API REST CineReview: Node.js nativo + SQLite relacional",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node --test tests/*.test.js",
+    "backup": "node scripts/backup.js"
+  }
+}
