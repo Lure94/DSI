@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <title>Recuperar contraseña | CineReview</title>
+    <link href="assets/css/styles.css" rel="stylesheet"/>
+    <link href="assets/css/community.css" rel="stylesheet"/>
+      <link rel="icon" href="favicon.ico" sizes="any"/>
+  </head>
+  <body class="auth-body" data-page="recover">
+    <main class="auth-layout">
+      <div class="auth-form-side">
+        <a class="brand auth-brand" href="index.html">Cine<span>Review</span><span class="brand__mark">✦</span></a>
+        <div class="auth-inner">
+          <span class="eyebrow">RECUPERA TU ACCESO</span>
+          <h1>¿Olvidaste tu contraseña?</h1>
+          <p>Ingresa tu correo electrónico. Si el correo está registrado, se enviará un enlace de recuperación cuando esté configurado el servicio de correo del backend.</p>
+          <form id="recover-form">
+            <label for="recover-email">Correo electrónico</label>
+            <input id="recover-email" placeholder="ejemplo@correo.com" required="" type="email"/>
+            <button class="button button--gold button--full" type="submit">Solicitar recuperación</button>
+          </form>
+          <p class="auth-bottom"><a href="login.html">← Volver al inicio de sesión</a></p>
+        </div>
+      </div>
+      <div class="auth-art auth-art--login"></div>
+    </main>
+    <div aria-live="polite" id="toast" role="status"></div>
+    <script src="assets/js/app.js" type="module"></script>
+  </body>
+</html>

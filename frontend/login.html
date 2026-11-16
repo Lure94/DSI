@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <title>Iniciar sesión | CineReview</title>
+    <link href="assets/css/styles.css" rel="stylesheet"/>
+    <link href="assets/css/community.css" rel="stylesheet"/>
+      <link rel="icon" href="favicon.ico" sizes="any"/>
+  </head>
+  <body class="auth-body" data-page="login">
+    <main class="auth-layout">
+      <div class="auth-form-side">
+        <a class="brand auth-brand" href="index.html">Cine<span>Review</span><span class="brand__mark">✦</span></a>
+        <div class="auth-inner">
+          <span class="eyebrow">¡QUÉ BUENO VERTE DE NUEVO!</span>
+          <h1>Iniciar Sesión</h1>
+          <p>Ingresa al templo del cine de autor y comparte tus reseñas.</p>
+          <form id="login-form" novalidate="">
+            <label for="login-email">Correo electrónico</label>
+            <input autocomplete="email" id="login-email" placeholder="ejemplo@correo.com" required="" type="email"/>
+            <label for="login-password">Contraseña</label>
+            <div class="password-wrapper">
+              <input autocomplete="current-password" id="login-password" placeholder="••••••••" required="" type="password"/>
+              <button aria-label="Mostrar contraseña" class="password-toggle" type="button">◉</button>
+            </div>
+            <div class="form-inline">
+              <label class="check"><input checked="" id="remember-me" type="checkbox"/> Recuérdame</label>
+              <a href="recuperar.html">¿Olvidaste tu contraseña?</a>
+            </div>
+            <button class="button button--gold button--full" type="submit">INICIAR SESIÓN</button>
+          </form>
+          <div class="auth-divider">
+            <span>O CONTINUAR CON</span>
+          </div>
+          <div class="social-buttons">
+          </div>
+          <a class="button button--gold button--small auth-back" href="index.html">VOLVER</a>
+          <p class="auth-bottom">¿No tienes cuenta? <a href="registro.html">Regístrate</a></p>
+          <p class="demo-note">Usa tu cuenta registrada en CineReview. La autenticación se verifica en el backend.</p>
+        </div>
+      </div>
+      <div class="auth-art auth-art--login">
+        <div class="auth-art__shade"></div>
+      </div>
+    </main>
+    <div aria-live="polite" id="toast" role="status"></div>
+    <script src="assets/js/app.js" type="module"></script>
+  </body>
+</html>
