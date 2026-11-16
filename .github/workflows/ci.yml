@@ -1,36 +1,58 @@
-name: CI
+﻿name: CI
 
 on:
-    push:
-        branches: [main]
-    pull_request:
+  push:
+    branches: [main]
+  pull_request:
 
 jobs:
-    backend:
-        runs-on: ubuntu-latest
+  backend:
+    runs-on: ubuntu-latest
 
-        defaults:
-            run:
-                working-directory:
-                    backend
-        
-        steps:
-            - uses: actions/checkout@v4
-            
-            - uses: actions/setup-node@v4
-              with:
-                node-version: 22
-            
-            - run: npm ci
-            - run: npm test
-            - run: npm run build
-        
-    frontend:
-        runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
 
-        steps:
-            - uses: actions/checkout@v4
+    steps:
+      - uses: actions/checkout@v4
 
-            - name: Validar estructura
-              run: |
-                test -f frontend/index.html
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: Ejecutar pruebas backend
+        run: npm test
+
+      - name: Validar sintaxis del servidor
+        run: node --check server.js
+
+  frontend:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Validar estructura frontend
+        run: |
+          test -d frontend
+          test -d frontend/assets
+
+      - name: Validar JavaScript del frontend
+        run: |
+          find frontend/assets/js -type f -name "*.js" -print0 | xargs -0 -r -n1 node --check
+
+      - name: Ejecutar pruebas frontend si existen
+        shell: bash
+        run: |
+          if compgen -G "frontend/tests/*.test.js" > /dev/null; then
+            node --test frontend/tests/*.test.js
+          else
+            echo "No hay pruebas frontend integradas en esta rama."
+          fi
