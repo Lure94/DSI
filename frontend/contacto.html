@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <title>Contáctanos | CineReview</title>
+    <link href="assets/css/styles.css" rel="stylesheet"/>
+    <link href="assets/css/community.css" rel="stylesheet"/>
+      <link rel="icon" href="favicon.ico" sizes="any"/>
+  </head>
+  <body data-page="contact">
+    <div id="site-header"></div>
+    <main class="container page-main">
+      <div class="page-title">
+        <span class="eyebrow">QUEREMOS ESCUCHARTE</span>
+        <h1>Contáctanos</h1>
+        <p>¿Tienes una pregunta o comentario? Nos encantaría saber de ti.</p>
+      </div>
+      <div class="contact-layout">
+        <form class="panel form-card" id="contact-form" novalidate="">
+          <h2>Envíanos un mensaje</h2>
+          <p>Déjanos tu consulta y nuestro equipo te responderá.</p>
+          <label for="contact-name">Nombre completo</label>
+          <input id="contact-name" minlength="2" placeholder="Tu nombre completo" required="" type="text"/>
+          <label for="contact-email">Correo electrónico</label>
+          <input id="contact-email" placeholder="ejemplo@correo.com" required="" type="email"/>
+          <label for="contact-subject">Asunto</label>
+          <select id="contact-subject" required=""><option value="">Seleccionar asunto</option><option>Consulta general</option><option>Problemas con mi cuenta</option><option>Reporte de contenido</option><option>Sugerencia</option></select>
+          <label for="contact-message">Mensaje</label>
+          <textarea id="contact-message" minlength="10" placeholder="Escribe aquí tu mensaje..." required="" rows="6"></textarea>
+          <button class="button button--gold button--full" type="submit">Enviar mensaje <span aria-hidden="true">→</span></button>
+          <p class="form-help">El mensaje se registrará en el backend para su revisión.</p>
+        </form>
+        <div class="contact-sidebar">
+          <div class="contact-banner"></div>
+          <div class="panel contact-info">
+            <h3>Información adicional</h3>
+            <p>Estamos aquí para ayudar a nuestra comunidad de amantes del cine.</p>
+            <div class="contact-item">
+              <span aria-hidden="true">✉</span>
+              <div>
+                <small>Correo</small>
+                <strong>Mensajes registrados mediante formulario</strong>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span aria-hidden="true">◷</span>
+              <div>
+                <small>Atención</small>
+                <strong>Lunes a viernes · 8:00 a. m. – 5:00 p. m.</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div id="site-footer"></div>
+    <div aria-live="polite" id="toast" role="status"></div>
+    <script src="assets/js/app.js" type="module"></script>
+  </body>
+</html>
