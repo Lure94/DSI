@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <title>Películas | CineReview</title>
+    <link href="assets/css/styles.css" rel="stylesheet"/>
+    <link href="assets/css/community.css" rel="stylesheet"/>
+      <link rel="icon" href="favicon.ico" sizes="any"/>
+  </head>
+  <body data-page="movies">
+    <div id="site-header"></div>
+    <main class="container page-main">
+      <div class="page-title">
+        <span class="eyebrow">EXPLORA NUESTRAS HISTORIAS</span>
+        <h1>Películas</h1>
+        <p>Encuentra tu próxima película favorita, explora géneros y revisa las valoraciones.</p>
+      </div>
+      <div class="filters">
+        <div aria-label="Filtrar por género" class="chip-group" id="genre-filters"></div>
+        <div class="filters__right">
+          <label aria-label="Buscar película" class="searchbox"><span aria-hidden="true" class="icon-magnifier">⌕</span><input id="movie-search" placeholder="Buscar película..." type="search"/></label>
+          <select aria-label="Ordenar películas" id="movie-sort"><option value="popular">Más populares</option><option value="rating">Mejor calificadas</option><option value="recent">Más recientes</option><option value="az">A-Z</option></select>
+        </div>
+      </div>
+      <div class="catalog-info">
+        <p aria-live="polite" class="api-status" id="catalog-source" role="status">Conectando con la API de películas…</p>
+        <button class="button button--outline button--small" id="catalog-refresh" type="button">↻ Actualizar catálogo</button>
+      </div>
+      <p class="results-count" id="movie-count"></p>
+      <div class="film-grid film-grid--catalog" id="movies-grid"></div>
+      <div class="empty-state hidden" id="movies-empty">
+        <h2>No encontramos películas</h2>
+        <p>Prueba con otro género o término de búsqueda.</p>
+        <button class="button button--gold" id="clear-movie-filters">Limpiar filtros</button>
+      </div>
+      <div class="center-action">
+        <button class="button button--red" id="more-movies">Ver más películas</button>
+      </div>
+    </main>
+    <div id="site-footer"></div>
+    <div aria-live="polite" id="toast" role="status"></div>
+    <script src="assets/js/app.js" type="module"></script>
+  </body>
+</html>
