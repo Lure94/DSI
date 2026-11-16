@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <title>Crear cuenta | CineReview</title>
+    <link href="assets/css/styles.css" rel="stylesheet"/>
+    <link href="assets/css/community.css" rel="stylesheet"/>
+      <link rel="icon" href="favicon.ico" sizes="any"/>
+  </head>
+  <body class="auth-body" data-page="register">
+    <main class="auth-layout">
+      <div class="auth-form-side">
+        <a class="brand auth-brand" href="index.html">Cine<span>Review</span><span class="brand__mark">✦</span></a>
+        <div class="auth-inner">
+          <span class="eyebrow">EMPIEZA TU HISTORIA</span>
+          <h1>Crear Cuenta</h1>
+          <p>Únete a nuestra comunidad y comparte tu pasión por el cine.</p>
+          <form id="register-form" novalidate="">
+            <label for="reg-name">Nombre completo</label>
+            <input autocomplete="name" id="reg-name" minlength="3" placeholder="Nombre y apellidos" required="" type="text"/>
+            <label for="reg-email">Correo electrónico</label>
+            <input autocomplete="email" id="reg-email" placeholder="ejemplo@correo.com" required="" type="email"/>
+            <label for="reg-password">Contraseña</label>
+            <div class="password-wrapper">
+              <input autocomplete="new-password" id="reg-password" minlength="8" placeholder="Mínimo 8 caracteres" required="" type="password"/>
+              <button aria-label="Mostrar contraseña" class="password-toggle" type="button">◉</button>
+            </div>
+            <label for="reg-confirm">Confirmar contraseña</label>
+            <div class="password-wrapper">
+              <input autocomplete="new-password" id="reg-confirm" placeholder="Confirma tu contraseña" required="" type="password"/>
+              <button aria-label="Mostrar contraseña" class="password-toggle" type="button">◉</button>
+            </div>
+            <label class="check terms-check"><input id="reg-terms" required="" type="checkbox"/> Acepto los <a href="terminos.html">términos y condiciones</a> de la plataforma.</label>
+            <button class="button button--gold button--full" type="submit">CREAR CUENTA</button>
+          </form>
+          <div class="auth-divider">
+            <span>O CONTINUAR CON</span>
+          </div>
+          <div class="social-buttons">
+          </div>
+          <a class="button button--gold button--small auth-back" href="index.html">VOLVER</a>
+          <p class="auth-bottom">¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a></p>
+          <p class="demo-note">Registro real: la contraseña se guarda protegida en el backend mediante un hash seguro.</p>
+        </div>
+      </div>
+      <div class="auth-art auth-art--register">
+        <div class="auth-art__shade"></div>
+      </div>
+    </main>
+    <div aria-live="polite" id="toast" role="status"></div>
+    <script src="assets/js/app.js" type="module"></script>
+  </body>
+</html>

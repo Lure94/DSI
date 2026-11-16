@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <title>Reseñas | CineReview</title>
+    <link href="assets/css/styles.css" rel="stylesheet"/>
+    <link href="assets/css/community.css" rel="stylesheet"/>
+      <link rel="icon" href="favicon.ico" sizes="any"/>
+  </head>
+  <body data-page="reviews">
+    <div id="site-header"></div>
+    <main class="container page-main">
+      <div class="page-title">
+        <span class="eyebrow">EXPLORA LO QUE OPINA LA COMUNIDAD</span>
+        <h1>Todas las Reseñas</h1>
+        <p>Lee críticas y valoraciones compartidas por nuestra comunidad de cinéfilos.</p>
+      </div>
+      <div class="filters">
+        <div class="chip-group" id="review-filters"></div>
+        <div class="filters__right">
+          <label class="searchbox"><span aria-hidden="true">⌕</span><input id="review-search" placeholder="Buscar reseñas..." type="search"/></label>
+          <select aria-label="Ordenar reseñas" id="review-sort"><option value="recent">Más recientes</option><option value="highest">Mejor valoradas</option><option value="lowest">Menor valoración</option></select>
+        </div>
+      </div>
+      <p class="results-count" id="review-count"></p>
+      <div class="review-grid review-grid--listing" id="reviews-grid"></div>
+      <div class="empty-state hidden" id="reviews-empty">No se encontraron reseñas con estos filtros.</div>
+      <div aria-label="Paginación de reseñas" class="pagination" id="review-pagination"></div>
+    </main>
+    <div id="site-footer"></div>
+    <div aria-live="polite" id="toast" role="status"></div>
+    <script src="assets/js/app.js" type="module"></script>
+  </body>
+</html>
