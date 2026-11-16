@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <title>Detalle de película | CineReview</title>
+    <link href="assets/css/styles.css" rel="stylesheet"/>
+    <link href="assets/css/community.css" rel="stylesheet"/>
+      <link rel="icon" href="favicon.ico" sizes="any"/>
+  </head>
+  <body data-page="detail">
+    <div id="site-header"></div>
+    <main class="container detail-main">
+      <nav class="breadcrumbs">
+        <a href="index.html">Inicio</a>
+        <span>›</span>
+        <a href="peliculas.html">Películas</a>
+        <span>›</span>
+        <span id="crumb-title">Detalle</span>
+      </nav>
+      <div id="movie-detail"></div>
+      <section class="section detail-reviews">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">COMUNIDAD</span>
+            <h2>Reseñas y valoraciones</h2>
+          </div>
+          <button class="button button--gold" id="detail-write" type="button">Escribir reseña</button>
+        </div>
+        <div class="review-list" id="detail-reviews-grid"></div>
+        <form class="panel form-card hidden" id="review-form" novalidate="">
+          <h3>Comparte tu opinión</h3>
+          <p>¿Qué te pareció esta película?</p>
+          <label>Tu calificación</label>
+          <div aria-label="Selecciona entre 1 y 5 estrellas" class="stars-picker" id="stars-picker"></div>
+          <label for="review-content">Tu reseña</label>
+          <textarea id="review-content" maxlength="1200" minlength="10" placeholder="Cuenta qué te gustó (o no) de esta película..." required="" rows="5"></textarea>
+          <p class="form-help">Mínimo 10 caracteres, máximo 1200.</p>
+          <button class="button button--gold" type="submit">Publicar reseña</button>
+        </form>
+      </section>
+    </main>
+    <div id="site-footer"></div>
+    <div aria-live="polite" id="toast" role="status"></div>
+    <script src="assets/js/app.js" type="module"></script>
+  </body>
+</html>

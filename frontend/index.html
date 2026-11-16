@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta content="#11101b" name="theme-color"/>
+    <meta content="CineReview: descubre películas, comparte tu opinión y forma parte de una comunidad de cinéfilos." name="description"/>
+    <title>Inicio | CineReview</title>
+    <link href="assets/css/styles.css" rel="stylesheet"/>
+    <link href="assets/css/community.css" rel="stylesheet"/>
+      <link rel="icon" href="favicon.ico" sizes="any"/>
+  </head>
+  <body data-page="home">
+    <div id="site-header"></div>
+    <main>
+      <section class="hero">
+        <div class="hero__veil"></div>
+        <div class="container hero__content">
+          <span class="eyebrow hero__eyebrow">TU COMUNIDAD DE CINE</span>
+          <h1>TU VIDA COMO UNA PELÍCULA<span class="gold">.</span></h1>
+          <p>Comparte tu opinión en la comunidad de cinéfilos.</p>
+          <div class="hero__actions">
+            <a class="button button--gold" href="peliculas.html">Explorar películas <span aria-hidden="true">→</span></a>
+            <a class="button button--glass" href="resenas.html">Ver reseñas</a>
+          </div>
+        </div>
+        <div class="hero__footer">DESCUBRE · RESEÑA · CALIFICA</div>
+      </section>
+      <section class="section container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">EN TENDENCIA</span>
+            <h2>Populares esta semana</h2>
+            <p>Las historias de las que todos están hablando.</p>
+          </div>
+          <a class="text-link" href="peliculas.html">Ver catálogo completo <span aria-hidden="true">↗</span></a>
+        </div>
+        <p aria-live="polite" class="api-status" id="home-source" role="status">Buscando películas reales…</p>
+        <div class="film-grid film-grid--home" id="home-movies"></div>
+      </section>
+      <section class="section section--reviews container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">LA VOZ DE LA COMUNIDAD</span>
+            <h2>Reseñas de Películas<br/><span class="gold">Populares</span></h2>
+            <p>Descubre lo que otros cinéfilos opinan.</p>
+          </div>
+          <div class="stat-block">
+            <strong>0</strong>
+            <span>Opiniones de la comunidad</span>
+          </div>
+        </div>
+        <div class="review-grid" id="home-reviews"></div>
+        <div class="center-action">
+          <a class="button button--outline" href="resenas.html">Explorar todas las reseñas <span aria-hidden="true">→</span></a>
+        </div>
+      </section>
+      <section class="join-section container">
+        <div>
+          <span class="eyebrow">FORMA PARTE DEL CINE</span>
+          <h2>Cada película merece una opinión.</h2>
+          <p>Únete a la comunidad y comparte lo que te hizo sentir tu última película.</p>
+        </div>
+        <a class="button button--gold" href="registro.html">Crear cuenta gratuita</a>
+      </section>
+    </main>
+    <div id="site-footer"></div>
+    <div aria-live="polite" id="toast" role="status"></div>
+    <script src="assets/js/app.js" type="module"></script>
+  </body>
+</html>
