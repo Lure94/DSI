@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <title>Administración | CineReview</title>
+    <link href="assets/css/styles.css" rel="stylesheet"/>
+    <link href="assets/css/community.css" rel="stylesheet"/>
+      <link rel="icon" href="favicon.ico" sizes="any"/>
+  </head>
+  <body data-page="admin">
+    <div id="site-header"></div>
+    <main class="container page-main">
+      <div class="page-title">
+        <span class="eyebrow">PANEL DE ADMINISTRACIÓN</span>
+        <h1>Moderación</h1>
+        <p>Consulta los reportes de la comunidad y administra perfiles de prueba.</p>
+      </div>
+      <div class="admin-tabs">
+        <button class="chip active" data-admin-tab="reports">Reportes de reseñas</button>
+        <button class="chip" data-admin-tab="users">Usuarios registrados</button>
+      </div>
+      <div class="admin-content" id="admin-content"></div>
+    </main>
+    <div id="site-footer"></div>
+    <div aria-live="polite" id="toast" role="status"></div>
+    <script src="assets/js/app.js" type="module"></script>
+  </body>
+</html>
