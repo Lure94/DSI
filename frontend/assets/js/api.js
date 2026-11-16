@@ -1,6 +1,5 @@
 /** CineReview — comunicación REST real con backend y sesión de usuario. */
-const BASE = (location.port === '3000' || !location.port)
-  ? '' : 'http://127.0.0.1:3000';
+const BASE = '';
 const KEY = 'cinereview-server-session-v1';
 
 function getSession() {
@@ -24,7 +23,7 @@ async function api(path,{method='GET',body}={}) {
     response=await fetch(BASE + '/api' + path,{method,headers,
       body:body===undefined?undefined:JSON.stringify(body),signal:AbortSignal.timeout(15000)});
   } catch(error) {
-    throw Error('No se pudo conectar con el backend. Inicia «node backend/server.js» y verifica http://localhost:3000/api/health.');
+    throw Error('No se pudo conectar con el backend. Verifica /api/health.');
   }
   let payload;
   try { payload=await response.json(); }
